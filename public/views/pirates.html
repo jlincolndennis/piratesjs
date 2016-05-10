@@ -1,5 +1,29 @@
 <h1 class="text-center">Pirates!</h1>
 
+<div class="row">
+  <form name='form' novalidate ng-submit='formSubmit()'>
+  <div class="form-group">
+    <label for="pirateName">What Be Your Pirate Name?</label>
+    <input type="text" class="form-control" name="name" ng-model="formData.name" placeholder="Pirate Name">
+  </div>
+  <div class="form-group">
+    <label for="posion">Pick Your Poison, Matey!</label>
+    <input type="text" class="form-control" name="posion" ng-model="formData.poison" placeholder="Poison">
+  </div>
+  <div class="form-group">
+    <label for="accessory">Name Your Piratey Accessory</label>
+    <input type="text" class="form-control" name="accessory" ng-model="formData.accessory" placeholder="Accessory">
+  </div>
+  <div class="form-group">
+    <label for="imageUrl">Let's See Your Ugly Mug</label>
+    <input type="text" class="form-control" name="image_url" ng-model="formData.image_url" placeholder="Image Url">
+  </div>
+
+
+  <button type="submit" class="btn btn-default">Join Our Crew</button>
+</form>
+</div>
+
 <div class='row page-header' ng-repeat='pirate in pirates'>
   <div class="col-md-4">
     <img ng-src="{{pirate.image_url}}" alt="" style="width: 200px">
