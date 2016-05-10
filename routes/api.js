@@ -6,7 +6,7 @@ var knex = require('knex')(require('../knexfile')["development"]);
 /* GET home page. */
 router.get('/pirates', function(req, res, next) {
   knex('pirate_table').then(function (data){
-    res.status(400).json(data)
+    res.json(data);
   })
 });
 
